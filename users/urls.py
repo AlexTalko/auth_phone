@@ -13,10 +13,10 @@ app_name = UsersConfig.name
 router = DefaultRouter()
 router.register(r"", UserViewSet, basename="users")
 
-user_create = UserViewSet.as_view({"post": "create"})
-user_detail = UserViewSet.as_view({"get": "retrieve"})
-user_update = UserViewSet.as_view({"put": "update", "patch": "partial_update"})
-user_delete = UserViewSet.as_view({"delete": "destroy"})
+user_create = UserViewSet.as_view({'post': 'create'})
+user_detail = UserViewSet.as_view({'get': 'retrieve'})
+user_update = UserViewSet.as_view({'put': 'update', 'patch': 'partial_update'})
+user_delete = UserViewSet.as_view({'delete': 'destroy'})
 
 
 urlpatterns = format_suffix_patterns([
