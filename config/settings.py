@@ -126,3 +126,7 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
+
+# Настройки для SMSAero
+SMSAERO_EMAIL = os.getenv('SMSAERO_EMAIL')  #'your email'
+SMSAERO_API_KEY = os.getenv('SMSAERO_API_KEY')  #'your api key'
