@@ -1,15 +1,16 @@
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from django.db import models
+
+from users.validators import phone_validator
 
 NULLABLE = {'blank': True, 'null': True}
 
 
-class User(AbstractUser):
+class User(AbstractUser, PermissionsMixin):
     username = None
-    objects = models.Manager()
 
     phone = models.CharField(max_length=16, unique=True, verbose_name='Телефон',
-                             help_text='Укажите номер телефона в формате...', default=0)
+                             help_text='Укажите номер телефона в формате 79991233221', validators=[phone_validator])
 
     first_name = models.CharField(max_length=20, **NULLABLE, verbose_name='Имя')
 
@@ -18,6 +19,7 @@ class User(AbstractUser):
     country = models.CharField(max_length=100, **NULLABLE, verbose_name='Страна', help_text='Откуда Вы?')
 
     invite_code = models.TextField(max_length=10, verbose_name='Код для приглашений', default=0)
+    ref_code = models.TextField(max_length=10, verbose_name='использован пригласительный код', default=0)
 
     USERNAME_FIELD = 'phone'
     REQUIRED_FIELDS = []
