@@ -31,7 +31,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'phonenumber_field',
+    'rest_framework_simplejwt',
+    'drf_yasg',
+    # 'phonenumber_field',
 
     'users',
 
@@ -127,6 +129,6 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-# Настройки для SMSAero
+# Настройки для SMSAero https://smsaero.ru/integration/api/
 SMSAERO_EMAIL = os.getenv('SMSAERO_EMAIL')  #'your email'
 SMSAERO_API_KEY = os.getenv('SMSAERO_API_KEY')  #'your api key'
