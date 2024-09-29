@@ -18,6 +18,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path('', include('users_interface.urls', namespace='users_interface')),
     path('admin/', admin.site.urls),
     path('users/', include('users.urls', namespace='users')),
 
