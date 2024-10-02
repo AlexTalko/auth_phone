@@ -11,5 +11,5 @@ urlpatterns = [
     path('', UserCreateView.as_view(), name='login'),
     path('sms_code', SmsCodeView.as_view(), name='sms_code'),
     path('user_detail', UserDetailView.as_view(), name='user_detail'),
-    path('users_interface/<int:pk>/', UserUpdateView.as_view(), name='user_update'),
+    path('user_update', UserUpdateView.as_view(), name='user_update'),
 ]

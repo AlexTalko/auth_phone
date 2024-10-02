@@ -16,7 +16,7 @@ class UserCreateView(CreateView):
     form_class = UserRegisterForm
     success_url = reverse_lazy('users_interface:login')
 
-    def get_success_url(self,):
+    def get_success_url(self, ):
         return reverse_lazy('users_interface:sms_code') + '?phone=' + self.object.phone
 
     def form_valid(self, form, *args, **kwargs):
@@ -46,6 +46,7 @@ class UserCreateView(CreateView):
         self.object = user
         return redirect(self.get_success_url())
 
+
 class SmsCodeView(View):
     def post(self, *args, **kwargs):
         phone = self.request.POST.get('phone')
@@ -72,12 +73,12 @@ class UserDetailView(DetailView):
     def get_object(self, queryset=None):
         return self.request.user
 
+
 class UserUpdateView(UpdateView):
     model = User
-    # template_name = 'users_interface/user_detail.html'
+    template_name = 'users_interface/user_form.html'
     form_class = ProfileUpdateForm
-    # success_url = reverse_lazy('users_interface:user_detail')
+    success_url = reverse_lazy('users_interface:user_detail')
 
-
-
-
+    def get_object(self, queryset=None):
+        return self.request.user
