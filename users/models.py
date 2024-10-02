@@ -21,6 +21,10 @@ class User(AbstractUser, PermissionsMixin):
     invite_code = models.TextField(max_length=10, verbose_name='Код для приглашений', default=0)
     ref_code = models.TextField(max_length=10, verbose_name='использован пригласительный код', default=0)
 
+    def get_reference(self):
+        user_list = User.objects.filter(ref_code=self.invite_code)
+        return [user.phone for user in user_list]
+
     USERNAME_FIELD = 'phone'
     REQUIRED_FIELDS = []
 
