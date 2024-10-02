@@ -3,11 +3,18 @@ from rest_framework.test import APITestCase
 from users.models import User
 from users.services import generate_code
 
-# def test_generate_code():
-#     """Тестирование генерации кода авторизации"""
-#     code = generate_code()
-#     code.assertEqual(len(code), 6)
-#     code.assertTrue(code.isdigit())
+
+def test_generate_code():
+    """Тестирование генерации кода авторизации"""
+    code = generate_code()
+    self.assertTrue(len(code) == 6)
+    self.assertTrue(code.isdigit())
+    self.assertNotIn('0', code)
+    self.assertNotIn('1', code)
+    self.assertNotIn('O', code)
+    self.assertNotIn('I', code)
+    self.assertNotIn('l', code)
+
 
 class UserTest(APITestCase):
     """Тестирование регистрации пользователя"""
@@ -15,7 +22,6 @@ class UserTest(APITestCase):
     def setUp(self):
         self.user = User.objects.create(phone='79991234567', invite_code='03m21C', first_name='Pest', country='United')
         # self.user = User.objects.create(phone='79991234568', invite_code='03m21R', ref_code='03m21C')
-
 
     def test_user_create(self):
         """Проверяем создание пользователя"""
@@ -39,4 +45,9 @@ class UserTest(APITestCase):
         self.assertEqual(self.user.ref_code, '03m21C')
         self.assertEqual(self.user.country, 'US')
 
+    def test_generate_code(self):
+        """Тестирование генерации кода авторизации"""
+        code = generate_code()
+        self.assertTrue(len(code) == 6)
+        self.assertFalse(code.isdigit())
 
