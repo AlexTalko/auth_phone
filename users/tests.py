@@ -4,18 +4,6 @@ from users.models import User
 from users.services import generate_code
 
 
-def test_generate_code():
-    """Тестирование генерации кода авторизации"""
-    code = generate_code()
-    self.assertTrue(len(code) == 6)
-    self.assertTrue(code.isdigit())
-    self.assertNotIn('0', code)
-    self.assertNotIn('1', code)
-    self.assertNotIn('O', code)
-    self.assertNotIn('I', code)
-    self.assertNotIn('l', code)
-
-
 class UserTest(APITestCase):
     """Тестирование регистрации пользователя"""
 
@@ -50,4 +38,3 @@ class UserTest(APITestCase):
         code = generate_code()
         self.assertTrue(len(code) == 6)
         self.assertFalse(code.isdigit())
-

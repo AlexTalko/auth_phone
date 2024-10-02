@@ -10,7 +10,6 @@ class UserCreateAPIView(generics.CreateAPIView):
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
-
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         return_data = {}
@@ -30,12 +29,14 @@ class UserCreateAPIView(generics.CreateAPIView):
 
         return Response(return_data, status=status.HTTP_201_CREATED)
 
+
 class UserUpdateAPIView(generics.UpdateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
     def get_object(self, *args, **kwargs):
         return self.request.user
+
 
 class UserProfileAPIView(generics.RetrieveAPIView):
     queryset = User.objects.all()

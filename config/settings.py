@@ -113,7 +113,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (BASE_DIR / 'static',)
 
-
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
@@ -133,5 +132,5 @@ SIMPLE_JWT = {
 }
 
 # Настройки для SMSAero https://smsaero.ru/integration/api/
-SMSAERO_EMAIL = os.getenv('SMSAERO_EMAIL')  #'your email'
-SMSAERO_API_KEY = os.getenv('SMSAERO_API_KEY')  #'your api key'
+SMSAERO_EMAIL = os.getenv('SMSAERO_EMAIL')  # 'your email'
+SMSAERO_API_KEY = os.getenv('SMSAERO_API_KEY')  # 'your api key'
