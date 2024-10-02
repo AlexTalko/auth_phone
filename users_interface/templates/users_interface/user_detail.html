@@ -4,6 +4,10 @@
 <div class="container">
     <div class="col-20">
         <div class="card">
+
+            <a class="btn btn-outline-primary" href="{% url 'users_interface:user_update' %}" role="button">Редактировать</a>
+            <a class="btn btn-outline-success" href="" role="button">Выйти</a>
+
             <div class="card-body">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -11,15 +15,13 @@
                 <p class="card-text">Имя: {{user.first_name}}</p>
                 <p class="card-text">Фамилия: {{user.last_name}}</p>
                 <p class="card-text">Страна: {{user.country}}</p>
+                <p class="card-text">Ваш пригласительный код: {{user.invite_code}}</p>
                 <p class="card-text">Пользователи с вашим пригласительным кодом: {% for ref in user.get_reference %}</p>
-                {{ref}}<br/>
+                <p class="mb-2">{{ref}}<br/></p>
                 {% endfor %}
             </div>
         </div>
-        <div class="col-12 mb-5">
-            <a class="btn btn-outline-primary" href="{% url 'users_interface:user_update' %}" role="button">Редактировать</a>
-            <a class="btn btn-outline-success" href="" role="button">Выйти</a>
-        </div>
+
     </div>
 </div>
 {% endblock %}

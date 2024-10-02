@@ -7,7 +7,7 @@ from rest_framework.reverse import reverse_lazy, reverse
 
 from users.models import User
 from users.services import create_invite_code, generate_code
-from users_interface.forms import UserRegisterForm, SmsCode, ProfileUpdateForm
+from users_interface.forms import UserRegisterForm, SmsCode, UserUpdateForm
 
 
 class UserCreateView(CreateView):
@@ -68,7 +68,7 @@ class SmsCodeView(View):
 class UserDetailView(DetailView):
     model = User
     template_name = 'users_interface/user_detail.html'
-    form_class = ProfileUpdateForm
+    # form_class = ProfileUpdateForm
 
     def get_object(self, queryset=None):
         return self.request.user
@@ -77,8 +77,11 @@ class UserDetailView(DetailView):
 class UserUpdateView(UpdateView):
     model = User
     template_name = 'users_interface/user_form.html'
-    form_class = ProfileUpdateForm
+    form_class = UserUpdateForm
     success_url = reverse_lazy('users_interface:user_detail')
 
     def get_object(self, queryset=None):
         return self.request.user
+
+    def get_success_url(self, ):
+        return reverse_lazy('users_interface:user_detail') + '?phone=' + self.object.phone
