@@ -34,9 +34,9 @@ def create_invite_code():
     return invite_code
 
 
-def send_sms(phone: int, message: str) -> dict:
+def send(phone: int, message: str) -> dict:
     """phone (int): Номер телефона, на который будет отправлено SMS-сообщение.
     message (str): Содержимое SMS-сообщения, которое будет отправлено.
     """
     api = SmsAero(SMSAERO_EMAIL, SMSAERO_API_KEY)
-    return api.send_sms(phone, message)
+    return api.send(phone, message)
