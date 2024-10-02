@@ -1,10 +1,9 @@
-from django.views.generic import UpdateView
 from rest_framework import status, generics
 from rest_framework.response import Response
 
 from users.models import User
 from users.serializers import UserSerializer, ProfileSerializer
-from users.services import create_invite_code, generate_code, send_sms
+from users.services import create_invite_code, generate_code, send
 
 
 class UserCreateAPIView(generics.CreateAPIView):
@@ -27,7 +26,7 @@ class UserCreateAPIView(generics.CreateAPIView):
             password = generate_code()
             user.set_password(password)
             user.save()
-            # send_sms(int(user.phone), password)
+            # send(int(user.phone), f'Ваш код авторизации: {password}' )
 
         return Response(return_data, status=status.HTTP_201_CREATED)
 
