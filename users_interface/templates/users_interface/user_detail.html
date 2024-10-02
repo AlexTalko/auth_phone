@@ -16,6 +16,7 @@
                 <p class="card-text">Фамилия: {{user.last_name}}</p>
                 <p class="card-text">Страна: {{user.country}}</p>
                 <p class="card-text">Ваш пригласительный код: {{user.invite_code}}</p>
+                <p class="card-text">Вы использовали пригласительный код: {{user.ref_code}}</p>
                 <p class="card-text">Пользователи с вашим пригласительным кодом: {% for ref in user.get_reference %}</p>
                 <p class="mb-2">{{ref}}<br/></p>
                 {% endfor %}
