@@ -16,11 +16,12 @@ class SmsCode(Form):
 
 class UserUpdateForm(UserChangeForm):
 
-    # def clean_ref_code(self):
-    #     ref_code = self.cleaned_data['ref_code']
-    #     if ref_code != 0:
-    #         raise forms.ValidationError('Вы уже использовали код')
-    #     return ref_code
+    def clean_ref_code(self):
+        ref_code = self.cleaned_data.get('ref_code')
+        if ref_code:
+            if not User.objects.filter(ref_code=ref_code).exists():
+                raise forms.ValidationError('Пригласительный код не найден!')
+        return ref_code
 
     class Meta:
         model = User
