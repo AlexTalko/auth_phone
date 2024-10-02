@@ -1,0 +1,296 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$ej8CkgL77Fo0EgDYju0B9A$oQADwnUKFUuJJzNlB4x2zbpmM12GM4SAzRkcSwluH6o=",
+      "last_login": "2024-10-02T11:11:43.181Z",
+      "is_superuser": true,
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-09-30T17:59:17.762Z",
+      "phone": "72223334455",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "0",
+      "ref_code": "0",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$jTG217KuFlCKq7i1qTfDWX$soQJNc7kFv5RiqSXi6aW5HGvrBBJ5pdX7VQ2nY8+aVg=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-30T18:03:15Z",
+      "phone": "79171206378",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "I82ib9",
+      "ref_code": "aP1g49",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$nV0IfeYLdsIgZp5wIUwZ15$LXV9HO0PIPo28vFwpjZZCcLzbZy/fVVqNtuMx2Z1Hpw=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-30T18:13:35.388Z",
+      "phone": "79171206371",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "0T03xi",
+      "ref_code": "I82ib9",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$oC3g8gyEDlUWnxWBE5fz02$slB+Fgg8N3TyQGdh8HbRiDXRz2xMT8daoqkFeOqk490=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-30T18:13:47.603Z",
+      "phone": "79171206322",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "1505Jc",
+      "ref_code": "I82ib9",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$ra70frVMIAN87MfNJAEr9U$p37MkSdzxzcgEXW2eq5wSmp3BQiNfbMeX8ENapQzCFc=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-30T18:14:03.100Z",
+      "phone": "79171206333",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "0D22zg",
+      "ref_code": "I82ib9",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$nI2X4jgzfCKaHa4lZEQRRv$ruFsHFLBDCzxm8sNF4CtJdwee0lI0GeWgv5+td97YLQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-30T18:14:34.228Z",
+      "phone": "79171206344",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "6A86Ln",
+      "ref_code": "I82ib9",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$DjQbTz3cDE1QOPFDAA2Leh$9tgnCM0sVZQBeNwO1QLbvkP4lQBGns+kwDncvcg4aco=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-30T18:14:50.815Z",
+      "phone": "79171206355",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "2Gl0X2",
+      "ref_code": "I82ib9",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$3AhxtpuM5hPysxqa7QJq8Z$oLuYQytdzV/qFs1AfsEs930fEKBOB1DA1asyuVbJvac=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-30T18:15:02.483Z",
+      "phone": "79171206366",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "R2zy52",
+      "ref_code": "I82ib9",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$i0n8kgCcZUz01DJA2vyc1c$5JjUdjjvabaOSs60iOnuw9AHPgo3jPTjZ0FLd+6sQdY=",
+      "last_login": "2024-10-02T11:11:10.368Z",
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-09-30T18:15:53.342Z",
+      "phone": "79179430628",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "aP1g49",
+      "ref_code": "0",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$MPWLF2nXFz68cvoyYoePGE$0Og0mqWX2uTpPMGvV+VHuU+AX9mZrMdpoiMFXbhYjnI=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-10-01T15:25:05.458Z",
+      "phone": "71233214456",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "4D29vH",
+      "ref_code": "0",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$ttsYqwBkTTc2NT3XHj6yzt$mTPwHK72b+24FU2osOYaGLRLG2mX45qzx6wfAqIke3c=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-10-01T15:35:59.834Z",
+      "phone": "71233214457",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "3t2Pb0",
+      "ref_code": "0",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$tVvTi6EXqVOueJCmTruQtE$Qn8rqPG6NLuENS6EsOaes+L3CFjlQd4aKAefeiAYP1A=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-10-01T15:37:05.093Z",
+      "phone": "79991234567",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "0hP385",
+      "ref_code": "0",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$BcYtDLEVxAdztkbsj7Sxyw$Yp6tn3Z43CtijOLtWV1QFoN2rr5mCDmLeNh3Alg6XIA=",
+      "last_login": "2024-10-02T11:12:35.636Z",
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-10-01T15:41:58Z",
+      "phone": "78887776655",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "I82ib9",
+      "ref_code": "I82ib9",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$6cxqrIDe6tF7DIVdohDAXE$hBPrsU/cDxTx447/zpPa286FOyY2qMC82GPBFYKlyOo=",
+      "last_login": "2024-10-01T15:57:26.388Z",
+      "is_superuser": false,
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-10-01T15:57:17.036Z",
+      "phone": "78887776656",
+      "first_name": null,
+      "last_name": null,
+      "country": null,
+      "invite_code": "4PP9w3",
+      "ref_code": "0",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
