@@ -19,7 +19,7 @@ class User(AbstractUser, PermissionsMixin):
     country = models.CharField(max_length=100, **NULLABLE, verbose_name='Страна', help_text='Откуда Вы?')
 
     invite_code = models.TextField(max_length=10, verbose_name='Код для приглашений', default=0)
-    ref_code = models.TextField(max_length=10, verbose_name='использован пригласительный код', default=0)
+    ref_code = models.TextField(max_length=10, verbose_name='использован пригласительный код', **NULLABLE)
 
     def get_reference(self):
         user_list = User.objects.filter(ref_code=self.invite_code)
