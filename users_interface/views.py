@@ -42,7 +42,7 @@ class UserCreateView(CreateView):
         user.set_password(password)
         user.save()
         # send_sms(int(user.phone), password)
-        messages.success(self.request, 'Отправили код в смс!')
+        # messages.success(self.request, 'Отправили код в смс!')
         self.object = user
         return redirect(self.get_success_url())
 
