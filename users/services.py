@@ -16,9 +16,8 @@ def generate_code():
     alphabet = string.ascii_letters + string.digits
     while True:
         random_code = ''.join(secrets.choice(alphabet) for i in range(6))
-        if (any(c.islower() for c in random_code)
-                and any(c.isupper() for c in random_code)
-                and sum(c.isdigit() for c in random_code) >= 3):
+        if (any(c.islower() for c in random_code) and any(c.isupper() for c in random_code) and sum(
+                c.isdigit() for c in random_code) >= 3):
             break
     print(random_code)
     return random_code
