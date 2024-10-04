@@ -11,6 +11,7 @@ from users_interface.forms import UserRegisterForm, SmsCode, UserUpdateForm
 
 
 class UserCreateView(CreateView):
+    """Сохранение пользователя при первом входе, отправка кода для входа, присваивание invite_code при первом входе"""
     template_name = 'users_interface/register.html'
     model = User
     form_class = UserRegisterForm
@@ -20,7 +21,6 @@ class UserCreateView(CreateView):
         return reverse_lazy('users_interface:sms_code') + '?phone=' + self.object.phone
 
     def form_valid(self, form, *args, **kwargs):
-        """"""
         return_data = {}
 
         form.is_valid()
@@ -48,6 +48,7 @@ class UserCreateView(CreateView):
 
 
 class SmsCodeView(View):
+    """Проверка кода из SMS и авторизация пользователя"""
     def post(self, *args, **kwargs):
         phone = self.request.POST.get('phone')
         code = self.request.POST.get('code')
@@ -66,6 +67,7 @@ class SmsCodeView(View):
 
 
 class UserDetailView(DetailView):
+    """Отображение данных пользователя"""
     model = User
     template_name = 'users_interface/user_detail.html'
     # form_class = ProfileUpdateForm
@@ -75,6 +77,7 @@ class UserDetailView(DetailView):
 
 
 class UserUpdateView(UpdateView):
+    """Обновление данных пользователя"""
     model = User
     template_name = 'users_interface/user_form.html'
     form_class = UserUpdateForm

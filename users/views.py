@@ -7,6 +7,7 @@ from users.services import create_invite_code, generate_code, send
 
 
 class UserCreateAPIView(generics.CreateAPIView):
+    """Сохраняет пользователя при первом входе, присваивает invite_code, высылает код для входа"""
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
@@ -31,6 +32,7 @@ class UserCreateAPIView(generics.CreateAPIView):
 
 
 class UserUpdateAPIView(generics.UpdateAPIView):
+    """Обновление данных пользователя"""
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
@@ -39,6 +41,7 @@ class UserUpdateAPIView(generics.UpdateAPIView):
 
 
 class UserProfileAPIView(generics.RetrieveAPIView):
+    """Отображение данных пользователя"""
     queryset = User.objects.all()
     serializer_class = ProfileSerializer
 

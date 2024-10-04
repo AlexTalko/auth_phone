@@ -5,16 +5,19 @@ from users.models import User
 
 
 class UserRegisterForm(ModelForm):
+    """Форма регистрации"""
     class Meta:
         model = User
         fields = ('phone',)
 
 
 class SmsCode(Form):
+    """Форма ввода кода"""
     code = CharField(label='Код из SMS')
 
 
 class UserUpdateForm(UserChangeForm):
+    """Форма обновления данных пользователя"""
 
     def clean_ref_code(self):
         """Проверяем ref_code"""

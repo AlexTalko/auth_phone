@@ -4,6 +4,7 @@ from users.models import User
 
 
 class Command(BaseCommand):
+    """Создание суперпользователя"""
     def handle(self, *args, **options):
         user = User.objects.create(phone='72223334455', invite_code='I82ib9')
         user.set_password('123456')
