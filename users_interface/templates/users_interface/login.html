@@ -1,0 +1,16 @@
+{% extends 'users_interface/base.html' %}
+{% block content %}
+<form>
+    <h1 class="h3 mb-3 fw-normal">Авторизация</h1>
+
+    <div class="form-floating">
+        <input type="телефон" class="form-control" id="floatingInput" placeholder="79991231234">
+        <label for="floatingInput">Номер телефона</label>
+        <button type="submit" class="btn btn-primary">
+            Отправить код
+        </button>
+    </div>
+
+    <p class="mt-5 mb-3 text-body-secondary">{% now 'Y' %}</p>
+</form>
+{% endblock %}
